@@ -1,0 +1,25 @@
+change the following in all scripts (tbd convert into env instead of hardcoded)
+app.py
+* DTOKEN
+* DUSER_ID
+* camera_url
+
+define_zones.py
+* camera_url
+
+preset.py
+* EMAIL
+* PASSWORD
+
+STRART BY TWEAKING THE FOLLOWING LINE IN pereset.py
+client.ptz_control_coordinates(device_serial, x_axis=0.46, y_axis=0.3) # CHANGE VALUES TO PERFECT YOUR CAMERA POSITION
+
+once perfectred and the camera position is ideal 
+
+RUN define_zones.py 
+this will open a frozen camera feed  with a frame for you to mark your forbidden areas use left mouse click to place an anchor and press "S" to save the zone
+
+RUN app.py TO ACTIVATE THE DOG MONITOR 
+check for working alerts on discord 
+readjust zones and preset if needed
+adjust screen capture delays to match your feed delay.
